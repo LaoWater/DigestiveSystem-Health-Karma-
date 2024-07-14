@@ -44,7 +44,7 @@
 # 2 = Body absolute upper limit - full expansion and inflammation of all digestive system and body
 
 
-user_input = {"Initial_KS2_Karmic_Balance": 0, "Quality": 0.7, "Timing": -0.7, "Logistics": -0.7,
+user_input = {"Initial_KS2_Karmic_Balance": 0, "Quality": 0.65, "Timing": -0.9, "Logistics": -0.92,
               "Quantity": 2}
 
 

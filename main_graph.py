@@ -86,14 +86,16 @@ k = 1.2  # Steepness of the curve
 x0 = 0.4  # Midpoint of the sigmoid
 
 # Generate values for the curve up to the maximum quantity specified
-x_values = np.linspace(0, quantity, 100)
-y_values = sigmoid(x_values, L, k, x0)
+x_values = np.linspace(0, quantity, 25)
+x_values = x_values.tolist()  # Convert to list to avoid any potential tuple issues
+y_values = [0] * len(x_values)  # Initializes a list of zeros with the same length as x_values
+
 for i, x in enumerate(x_values):
     if x <= 1:
-        y_values[i] = sigmoid(x, L, 20, 0.5)  # 20 and 0.5 are arbitrary, tune these
+        y_values[i] = sigmoid(x, L, k, x0)  # 20 and 0.5 are arbitrary, tune these
     else:
         y_values[i] = y_values[i - 1] - 0.1 * (x - 1)  # Decrease value beyond x=1
-y_values = y_values * 3
+
 # Set the first y-value to the initial KS2 balance
 y_values[0] = initial_ks2_balance
 print("\n X-Axis Quantity values spread out decimally: ", x_values)
