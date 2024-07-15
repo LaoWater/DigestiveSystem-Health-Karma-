@@ -86,7 +86,7 @@ k = 1.2  # Steepness of the curve
 x0 = 0.4  # Midpoint of the sigmoid
 
 # Generate values for the curve up to the maximum quantity specified
-x_values = np.linspace(0, quantity, 25)
+x_values = np.linspace(0, quantity, 10)
 x_values = x_values.tolist()  # Convert to list to avoid any potential tuple issues
 y_values = [0] * len(x_values)  # Initializes a list of zeros with the same length as x_values
 
